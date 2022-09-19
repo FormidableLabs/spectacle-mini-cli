@@ -31,8 +31,7 @@ const getServer = ({ index, slides }) => http.createServer((req, res) => {
     // Slides data
     res.setHeader("Content-Type", "application/json");
     res.writeHead(200);
-    res.write(JSON.stringify({ slides }, null, 2));
-    res.end();
+    res.end(JSON.stringify({ slides }));
   } else {
     // 404 everything else
     res.writeHead(404);
