@@ -1,5 +1,15 @@
 /**
- * Simple CLI
+ * Simple Spectacle MD deck CLI
+ *
+ * Usage:
+ * ```
+ * # In one terminal start the CLI.
+ * $ node ./bin.js PATH_TO_MD_SLIDES
+ * $ node ./bin.js slides.md
+ *
+ * # In another open a browser.
+ * $ open http://127.0.0.1:3000/
+ * ```
  */
 const fs = require("fs").promises;
 const path = require("path");
