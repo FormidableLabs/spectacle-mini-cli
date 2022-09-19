@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Spectacle One-Page Example</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script src="https://unpkg.com/react@18.1.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.1.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/react-is@18.1.0/umd/react-is.production.min.js"></script>
+    <script src="https://unpkg.com/prop-types@15.7.2/prop-types.min.js"></script>
+    <script src="https://unpkg.com/spectacle@^9/dist/spectacle.min.js"></script>
+    <!-- <script src="../../packages/spectacle/dist/spectacle.js"></script> -->
+
+    <script type="module">
+      const {
+        Deck,
+        MarkdownSlideSet,
+      } = Spectacle;
+
+      // HTM setup
+      import htm from 'https://unpkg.com/htm@^3?module';
+      const html = htm.bind(React.createElement);
+
+      // Get slides data
+      const { slides } = await fetch("/slides.json")
+        .then((response) => response.json());
+
+      const Presentation = () => html`
+        <${Deck}>
+          <${MarkdownSlideSet}>
+            ${slides}
+          </${MarkdownSlideSet}>
+        </${Deck}>
+      `;
+
+      const root = ReactDOM.createRoot(document.getElementById('root'));
+      root.render(html`<${Presentation}/>`);
+    </script>
+  </body>
+</html>
