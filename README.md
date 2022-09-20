@@ -25,6 +25,12 @@ $ npx FormidableLabs/spectacle-mini-cli --slides ./path/to/slides.md
 Spectacle deck available at http://localhost:3000
 ```
 
+## Contributing
+
+```sh
+$ yarn|npm|pnpm start
+```
+
 ## More frills we could add
 
 - [ ] `--host` option

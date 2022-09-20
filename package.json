@@ -20,6 +20,6 @@
     "markdown"
   ],
   "scripts": {
-    "start": "node ./bin.js slides.md"
+    "start": "node ./bin.js --slides slides.md"
   }
 }
