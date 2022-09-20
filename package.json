@@ -1,0 +1,25 @@
+{
+  "name": "spectacle-mini-cli",
+  "version": "0.0.1",
+  "description": "A mini CLI for Spectacle Markdown decks.",
+  "main": "bin.js",
+  "bin": {
+    "spectacle-mini-cli": "./bin.js"
+  },
+  "files": [
+    "index.html",
+    "bin.js"
+  ],
+  "repository": "https://github.com/FormidableLabs/spectacle-mini-cli",
+  "homepage": "https://github.com/FormidableLabs/spectacle-mini-cli#readme",
+  "author": "Ryan Roemer <ryan.roemer@formidable.com>",
+  "license": "MIT",
+  "keywords": [
+    "spectacle",
+    "presentation",
+    "markdown"
+  ],
+  "scripts": {
+    "start": "node ./bin.js slides.md"
+  }
+}
